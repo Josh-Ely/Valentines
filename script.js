@@ -3,15 +3,18 @@ const heading = document.querySelector("h1");
 const yesBtn = document.getElementById("yesBtn");
 
 noBtn.addEventListener("click", () => {
+    document.body.classList.add("choice-made");
   heading.textContent = "Wrong answer 😌 Try again.";
 });
 
 yesBtn.addEventListener("click", () => {
+    document.body.classList.add("choice-made");
+
   heading.style.opacity = 0;
   heading.style.transform = "translateY(-10px)";
 
   setTimeout(() => {
-    heading.textContent = "I knew you’d say yes! See you on Feb 14 ❤️";
+    heading.textContent = "See you on Feb 14 ❤️";
     heading.style.opacity = 1;
     heading.style.transform = "translateY(0)";
   }, 400);

@@ -6,6 +6,8 @@ html, body
 
 h1 {
   transition: opacity 0.4s ease, transform 0.4s ease;
+    font-size: clamp(2rem, 6vw, 3rem);
+  line-height: 1.2;
 }
 
 .card {
@@ -25,6 +27,7 @@ body{
   align-items: center;
   gap: 30px;                /* space between text & buttons */
   text-align: center;
+    padding: 20px;
 }
 
 .buttons {
@@ -42,6 +45,7 @@ button {
   cursor: pointer;
   background: white;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+    min-width: 120px;
 }
 
 /* Hover lift */
@@ -71,6 +75,11 @@ button::after {
 .no:hover::after {
   content: "💔";
   transform: translateY(-50%) scale(1);
+}
+
+.choice-made .yes::after,
+.choice-made .no::after {
+  content: "";
 }
 
 .confetti {
